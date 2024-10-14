@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:p1_donut_app_pablo_soberanis/utils/my_tab.dart';
 
+import '../tab/donut_tab.dart';
+import '../tab/burger_tab.dart';
+import '../tab/pancake_tab.dart';
+import '../tab/pizza_tab.dart';
+import '../tab/smoothie_tab.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -48,8 +53,8 @@ List<Widget> myTabs = [
               padding: EdgeInsets.all(24.0),
               child: Row(
                 children: [
-                  Text("I want to ", style: TextStyle(fontSize: 24)),
-                  Text("Eat",
+                  Text("Im Pablo and  ", style: TextStyle(fontSize: 24)),
+                  Text("i cook:",
                       style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
@@ -58,11 +63,19 @@ List<Widget> myTabs = [
               ),
             ),
             //Tab bar
-            TabBar(tabs: myTabs)
-
+            TabBar(tabs: myTabs),
             //Tab bar view
-
+            const Expanded(
+              child: TabBarView(children: [
+              DonutTab(),
+              BurgerTab(),
+              SmoothieTab(),
+              PanCakeTab(),
+              PizzaTab()
+            ],
+            ),
             //Total del carrito
+            ),
           ],
         ),
       ),
