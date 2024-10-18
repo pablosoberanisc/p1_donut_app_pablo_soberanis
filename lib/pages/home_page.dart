@@ -53,8 +53,8 @@ List<Widget> myTabs = [
               padding: EdgeInsets.all(24.0),
               child: Row(
                 children: [
-                  Text("Im Pablo and  ", style: TextStyle(fontSize: 24)),
-                  Text("i cook:",
+                  Text("friday  ", style: TextStyle(fontSize: 24)),
+                  Text("party",
                       style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
@@ -65,13 +65,13 @@ List<Widget> myTabs = [
             //Tab bar
             TabBar(tabs: myTabs),
             //Tab bar view
-            const Expanded(
+            Expanded(
               child: TabBarView(children: [
               DonutTab(),
-              BurgerTab(),
-              SmoothieTab(),
-              PanCakeTab(),
-              PizzaTab()
+              const BurgerTab(),
+              const SmoothieTab(),
+              const PanCakeTab(),
+              const PizzaTab()
             ],
             ),
             //Total del carrito
